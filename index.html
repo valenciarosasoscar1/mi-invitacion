@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff4f7">
+
+    <title>Invitación 💌</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <main class="app" id="app">
+        <div class="shell">
+
+
+            <div class="card">
+
+                <!-- Progreso de la invitación -->
+                <div class="progress" aria-label="Progreso">
+                    <span class="dot on"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+
+                <!-- ================================= -->
+                <!-- PANTALLA 1: INTRODUCCIÓN          -->
+                <!-- Imagen: img/1.png                 -->
+                <!-- ================================= -->
+
+                <section class="step active" id="step0">
+
+                    <img
+                        class="sticker-hero"
+                        src="img/1.png"
+                        alt="Sticker 1"
+                    >
+
+                    <h1>
+                        Tengo una pregunta
+                        <span class="highlight">importante</span>...
+                    </h1>
+
+
+                    <button class="btn btn-primary" id="startBtn">
+                        A ver, dime 👀
+                    </button>
+
+                </section>
+
+
+                <!-- ================================= -->
+                <!-- PANTALLA 2: LA PREGUNTA           -->
+                <!-- Imagen: img/3.png                 -->
+                <!-- ================================= -->
+
+                <section class="step" id="step1">
+
+                    <img
+                        class="sticker-hero"
+                        src="img/3.png"
+                        alt="Sticker 3"
+                    >
+
+                    <h2>
+                        ¿Te gustaría salir
+                        <span class="highlight">conmigo</span>?
+                    </h2>
+
+                    <div class="actions" id="buttonArea">
+
+                        <button class="btn btn-primary" id="yesBtn">
+                            ¡SÍ!
+                        </button>
+
+                        <span class="no-zone" id="noZone">
+                            <button class="btn no-btn" id="noBtn">
+                                No
+                            </button>
+                        </span>
+
+                    </div>
+
+                    <div class="toast" id="noToast" aria-live="polite"></div>
+
+
+                </section>
+
+
+                <!-- ================================= -->
+                <!-- PANTALLA 3: ACTIVIDAD             -->
+                <!-- Imagen: img/2.png                 -->
+                <!-- ================================= -->
+
+                <section class="step" id="step2">
+
+                    <img
+                        class="sticker-hero"
+                        src="img/2.png"
+                        alt="Sticker de una taza de café"
+                    >
+
+                    <h2>
+                        ¡Sabía que dirías que sí!
+                        <span class="highlight"></span>
+                    </h2>
+
+                    <p>
+                        Ahora elige tu plan favorito 🫡
+                    </p>
+
+                    <div class="choices" id="choices">
+
+                        <button
+                            class="choice"
+                            data-kind="Ir a las luchas"
+                            data-emoji="🤼‍♂️"
+                        >
+                            <span class="icon">🤼‍♂️</span>
+                            <span>
+                                <strong>Ir a las luchas</strong>
+                                <small>Pa decir groserias fuertes</small>
+                            </span>
+                        </button>
+
+                        <button
+                            class="choice"
+                            data-kind="Comer algo rico"
+                            data-emoji="🍝"
+                        >
+                            <span class="icon">🍝</span>
+                            <span>
+                                <strong>Comer algo rico</strong>
+                            </span>
+                        </button>
+                        <button
+                            class="choice"
+                            data-kind="Ir al cine"
+                            data-emoji="🎬"
+                        >
+                            <span class="icon">🎬</span>
+                            <span>
+                                <strong>Ir al cine</strong>
+                            </span>
+                        </button>
+                        <button
+                            class="choice"
+                            data-kind="Ir por un café"
+                            data-emoji="☕"
+                        >
+                            <span class="icon">☕</span>
+                            <span>
+                                <strong>Ir por un café</strong>
+                                <small>Jumbo, por que chiquito nancy </small>
+                            </span>
+                        </button>
+
+
+
+                    </div>
+
+                    <button
+                        class="btn btn-primary"
+                        id="toDateBtn"
+                        disabled
+                        style="opacity: 0.5;"
+                    >
+                        Elegir fecha y hora →
+                    </button>
+
+                    <br>
+
+                    <button class="back" data-back="1">
+                        ← Regresar
+                    </button>
+
+                </section>
+
+
+                <!-- ================================= -->
+                <!-- PANTALLA 4: FECHA Y HORA          -->
+                <!-- Imagen: img/3.png                 -->
+                <!-- ================================= -->
+
+                <section class="step" id="step3">
+
+                    <img
+                        class="sticker-hero"
+                        src="img/3.png"
+                        alt="Taza de café con corazones"
+                    >
+
+                    <h2>
+                        ¿Qué día te
+                        <span class="highlight">queda bien</span>?
+                    </h2>
+
+                    <label class="field-label" for="dateInput">
+                        Fecha
+                    </label>
+
+                    <input
+                        class="date-input"
+                        type="date"
+                        id="dateInput"
+                    >
+
+                    <span class="field-label">
+                        ¿A qué hora?
+                    </span>
+
+                    <div class="times" id="times">
+
+                        <button class="time" data-time="12:00 PM">
+                            12:00 PM
+                        </button>
+
+                        <button class="time" data-time="3:00 PM">
+                            3:00 PM
+                        </button>
+
+                        <button class="time" data-time="5:00 PM">
+                            5:00 PM
+                        </button>
+
+                        <button class="time" data-time="6:30 PM">
+                            6:30 PM
+                        </button>
+
+                        <button class="time" data-time="8:00 PM">
+                            8:00 PM
+                        </button>
+
+                        <button class="time" data-time="Flexible">
+                            Tú eliges
+                        </button>
+
+                    </div>
+
+                    <button
+                        class="btn btn-primary"
+                        id="confirmBtn"
+                        disabled
+                        style="opacity: 0.5;"
+                    >
+                        Confirmar nuestra cita 💞
+                    </button>
+
+                    <br>
+
+                    <button class="back" data-back="2">
+                        ← Cambiar plan
+                    </button>
+
+                </section>
+
+
+                <!-- ================================= -->
+                <!-- PANTALLA 5: CONFIRMACIÓN Y CARTA  -->
+                <!-- Imagen: img/4.png                 -->
+                <!-- ================================= -->
+
+                <section class="step" id="step4">
+
+                    <img
+                        class="sticker-hero"
+                        src="img/4.png"
+                        alt="Taza de café acompañada de una carta"
+                    >
+
+                    <h2>
+                        ¡Tenemos una
+                        <span class="highlight">cita</span>!
+                    </h2>
+
+                    <!-- Resumen generado por JavaScript -->
+                    <div class="summary" id="summary"></div>
+
+                    <h3 style="margin: 22px 0 0; font-size: 17px;">
+                        Toca el sobre para abrir la carta
+                    </h3>
+
+                    <!-- Sobre de la carta secreta -->
+                    <div
+                        class="envelope-wrap"
+                        id="envelope"
+                        role="button"
+                        tabindex="0"
+                        aria-label="Abrir carta secreta"
+                    >
+                        <div class="envelope">
+                            <div class="letter">
+                                Para ti 💌
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Mensaje secreto -->
+                    <div class="secret" id="secret">
+                        <p>
+                            Que dice el viejo bien machín 🗣️🗣️.
+                            <br><br>
+                            Me dijiste que te gustaban los detalles así que quería invitarte a salir de una forma
+                            un poquito diferente. ❤️
+
+                            <br><br>
+
+                            No sé si la cita será de película,
+                            de café, de comer o de ir a gritar groserias fuertess, pero sí sé que me hace
+                            ilusión compartir ese ratito contigo.
+
+                            <br><br>
+
+                            <strong>
+                                Gracias por decir que sí. 💗
+                            </strong>
+                        </p>
+                    </div>
+
+                    <button
+                        class="btn btn-primary"
+                        id="againBtn"
+                        style="margin-top: 20px;"
+                    >
+                        Volver a ver la invitación ↻
+                    </button>
+
+                </section>
+
+            </div>
+
+            <div class="footnote">
+                Para Malinalli con mucho cariño y un poquito de código ♡
+            </div>
+
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
